@@ -49,7 +49,7 @@ WebRTC (Webcam)
 git clone https://github.com/yourusername/smart-object-dashboard.git
 2️⃣ Navigate to Project Folder
 cd smart-object-dashboard
-3️⃣ Run Using Live Server (Recommended)
+3️⃣ Run Using Live Server 
 
 If using VS Code:
 
