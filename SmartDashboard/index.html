@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Object Interaction Dashboard</title>
+    <meta name="description" content="A futuristic, real-time smart object interaction dashboard using AI.">
+    <!-- Modern Typography: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js and COCO-SSD -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <div id="particle-container"></div>
+    
+    <header class="glass-panel top-bar">
+        <div class="status-item"><span class="indicator red" id="cam-status"></span> Webcam: <span id="cam-text">Connecting...</span></div>
+        <div class="status-item"><span class="indicator red" id="model-status"></span> Model: <span id="model-text">Loading...</span></div>
+        <div class="status-item objects-list">Detected: <span id="detected-list">None</span></div>
+        <div class="status-item fps-counter">FPS: <span id="fps-text">0</span></div>
+    </header>
+
+    <main class="main-container">
+        <!-- Controls Left -->
+        <aside class="controls-panel glass-panel">
+            <h3>System Controls</h3>
+            <label class="switch-container">
+                <span class="switch-label">Live Detection</span>
+                <input type="checkbox" id="toggle-detection" checked>
+                <span class="switch"></span>
+            </label>
+            <label class="switch-container">
+                <span class="switch-label">Overlay Visuals</span>
+                <input type="checkbox" id="toggle-boxes" checked>
+                <span class="switch"></span>
+            </label>
+            
+            <div class="history-panel">
+                <h4>Activity Log</h4>
+                <ul id="history-list"></ul>
+            </div>
+        </aside>
+
+        <!-- Center Feed -->
+        <section class="feed-container">
+            <div class="video-wrapper">
+                <div class="loading-overlay" id="loading-overlay">
+                    <div class="spinner"></div>
+                    <p>Initializing AI Core...</p>
+                </div>
+                <video id="webcam" autoplay playsinline muted></video>
+                <canvas id="overlay"></canvas>
+            </div>
+        </section>
+
+        <!-- Action Cards Right -->
+        <aside class="actions-container" id="actions-container">
+            <!-- Dynamic Glass Cards injected here -->
+        </aside>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
