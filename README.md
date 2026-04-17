@@ -98,8 +98,7 @@ Custom object training
 Mobile support
 AI automation triggers
 👩‍💻 Author
-
-Deeksha Ahirwar
+Vishakha Ahirwar
 AI & Web Development Enthusiast
 
 ⭐ Show Your Support
